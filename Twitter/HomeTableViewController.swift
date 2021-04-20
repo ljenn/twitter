@@ -17,7 +17,7 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTweets()
+        self.loadTweets()
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
         tableView.rowHeight = UITableView.automaticDimension
@@ -25,7 +25,11 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        loadTweets()
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+        print("viewdidappearaccess")
+        self.loadTweets()
+        self.tableView.reloadData()
     }
     
     @objc func loadTweets() {
