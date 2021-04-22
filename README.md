@@ -49,4 +49,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![](/gifs/twitter-pt1.gif =250x)
+<img src="/gifs/twitter-pt1.gif" width="250"/>
